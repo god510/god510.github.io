@@ -22,7 +22,7 @@
 
   
 
-  <title>关于 | Hexo</title>
+  <title>hexo 怎么弄到github.io | Hexo</title>
 
   
 
@@ -102,7 +102,7 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">关于</h1>
+          <h1 class="title-wrap">hexo 怎么弄到github.io</h1>
           <h2 class="title-sub-wrap">
             <strong>god510</strong>
             <span>发布于</span>
@@ -111,7 +111,7 @@
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-03-28T01:07:19.281Z" itemprop="dateUpdated">2024-03-28</time>
+              <time  class="article-updated" datetime="2024-03-28T03:03:46.028Z" itemprop="dateUpdated">2024-03-28</time>
             </h2>
           
           
@@ -148,7 +148,27 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><h3 id="第贰章"><a href="#第贰章" class="headerlink" title="第贰章"></a>第贰章</h3><h3 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h3>
+        <h2 id="将-Hexo-部署到-GitHub-Pages-的步骤"><a href="#将-Hexo-部署到-GitHub-Pages-的步骤" class="headerlink" title="将 Hexo 部署到 GitHub Pages 的步骤"></a>将 Hexo 部署到 GitHub Pages 的步骤</h2><h3 id="1-创建-GitHub-Pages-仓库"><a href="#1-创建-GitHub-Pages-仓库" class="headerlink" title="1. 创建 GitHub Pages 仓库"></a>1. 创建 GitHub Pages 仓库</h3><ul>
+<li>在 GitHub 上创建一个新的仓库，仓库名为 &lt;您的用户名&gt;.github.io</li>
+</ul>
+<h3 id="2-配置-Hexo"><a href="#2-配置-Hexo" class="headerlink" title="2. 配置 Hexo"></a>2. 配置 Hexo</h3><ul>
+<li><p>在您的 Hexo 博客的 _config.yml 文件中，找到 deploy 部分，并配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:&lt;您的用户名&gt;/&lt;您的用户名&gt;.github.io.git</span><br><span class="line">  branch: main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意！！！！ branch: main 不是 branch: master</strong></p>
+</blockquote>
+</li>
+<li><p>确保您的 SSH 密钥已添加到 GitHub 账户中。</p>
+</li>
+</ul>
+<h3 id="3-安装部署插件"><a href="#3-安装部署插件" class="headerlink" title="3. 安装部署插件"></a>3. 安装部署插件</h3><ul>
+<li>在您的 Hexo 目录中，运行以下命令来安装 hexo-deployer-git<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-生成静态文件并部署"><a href="#4-生成静态文件并部署" class="headerlink" title="4. 生成静态文件并部署"></a>4. 生成静态文件并部署</h3><ul>
+<li>使用以下命令生成静态文件并部署到 GitHub Pages<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><em><strong>完成这些步骤后，您的 Hexo 博客应该已经成功部署到 https:&#x2F;&#x2F;&lt;您的用户名&gt;.github.io</strong></em></p>
+
       </section>
 
       
